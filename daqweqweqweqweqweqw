@@ -1,0 +1,18 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#8778
+    [34mall[39m: [
+      [34;4mApp\Models\Employee[39;24m {#8777
+        [34mid[39m: [35m1[39m,
+        [34memployee_number[39m: [32m"[39m[32mEMP001[39m[32m"[39m,
+        [34mfirst_name[39m: [32m"[39m[32mJohn[39m[32m"[39m,
+        [34mlast_name[39m: [32m"[39m[32mDoe[39m[32m"[39m,
+        [34memail[39m: [32m"[39m[32mjohn@example.com[39m[32m"[39m,
+        [34mphone_number[39m: [36mnull[39m,
+        [34mhire_date[39m: [32m"[39m[32m2026-11-03[39m[32m"[39m,
+        [34msalary[39m: [32m"[39m[32m8500000.00[39m[32m"[39m,
+        [34mdepartment_id[39m: [35m1[39m,
+        [34mposition_id[39m: [35m1[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-11-03 12:00:35[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-11-03 12:00:35[39m[32m"[39m,
+      },
+    ],
+  }
