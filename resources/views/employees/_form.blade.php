@@ -1,4 +1,12 @@
 <div class="grid gap-4 md:grid-cols-2">
+    @isset($employee)
+    <div>
+        <label class="block mb-1 font-medium">Employee ID</label>
+        <input type="text" value="{{ $employee->employee_number }}" readonly
+               class="w-full border rounded px-3 py-2 bg-gray-100 font-mono">
+    </div>
+    @endisset
+
     <div>
         <label for="name" class="block mb-1 font-medium">Name</label>
         <input type="text" id="name" name="name"

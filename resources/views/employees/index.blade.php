@@ -9,7 +9,7 @@
 
 <form method="GET" action="{{ route('employees.index') }}" class="mb-4 flex gap-2">
     <input type="text" name="search" value="{{ request('search') }}"
-           placeholder="Search by name or email"
+           placeholder="Search by name, email, or ID"
            class="flex-1 border rounded px-3 py-2">
     <button class="bg-gray-800 text-white px-4 py-2 rounded">Search</button>
     @if (request('search'))
@@ -21,6 +21,7 @@
     <table class="w-full text-left">
         <thead class="bg-gray-50 border-b">
             <tr>
+                <th class="p-3">ID</th>
                 <th class="p-3">Name</th>
                 <th class="p-3">Email</th>
                 <th class="p-3">Department</th>
@@ -32,6 +33,7 @@
         <tbody>
             @forelse ($employees as $employee)
                 <tr class="border-b">
+                    <td class="p-3">{{ $employee->employee_number }}</td>
                     <td class="p-3">{{ $employee->name }}</td>
                     <td class="p-3">{{ $employee->email }}</td>
                     <td class="p-3">{{ $employee->department->name }}</td>
@@ -49,7 +51,7 @@
                     </td>
                 </tr>
             @empty
-                <tr><td colspan="6" class="p-3 text-center text-gray-500">No employees found.</td></tr>
+                <tr><td colspan="7" class="p-3 text-center text-gray-500">No employees found.</td></tr>
             @endforelse
         </tbody>
     </table>

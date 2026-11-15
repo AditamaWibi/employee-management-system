@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Services\EmployeeNumbergenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,5 +20,13 @@ class Employee extends Model
 
     public function position() {
         return $this->belongsTo(Position::class);
+    }
+    
+    protected static function booted(): void {
+        static::creating(function (Employee $employee) {
+            if (empty($employee->employee_number)) {
+                $employee->employee_number = app(EmployeeNumbergenerator::class)->generate($employee->hire_date);
+            }
+        });
     }
 }
