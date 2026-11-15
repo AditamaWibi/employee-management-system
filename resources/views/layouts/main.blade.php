@@ -10,6 +10,7 @@
 <body class="bg-gray-100">
     <nav class="bg-white shadow mb-6">
         <div class="max-w-4x1 mx-auto px-4 py-3 flex gap-6">
+            <a href="{{ route('dashboard') }}" class="font-semibold">Dashboard</a>
             <a href="{{ route('departments.index') }}" class="font-semibold">Departments</a>
             <a href="{{ route('positions.index') }}" class="font-semibold">Positions</a>
             <a href="{{ route('employees.index') }}" class="font-semibold">Employees</a>

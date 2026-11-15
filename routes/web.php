@@ -1,13 +1,12 @@
 <?php
 
+use App\Http\Controllers\DashboardContoller;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PositionController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', DashboardContoller::class)->name('dashboard');
 
 Route::resource('departments',DepartmentController::class)->except('show');
 
